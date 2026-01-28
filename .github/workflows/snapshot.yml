@@ -6,11 +6,11 @@ on:
 permissions:
   contents: write
 jobs:
-  update:
+  snapshot:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: fetch
         run: |
           curl -s https://paintboard.luogu.me/api/paintboard/getboard -o board.raw
